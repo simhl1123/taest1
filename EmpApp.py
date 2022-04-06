@@ -50,11 +50,11 @@ def AddEmp():
 
         cursor.execute(insert_sql, (emp_id, first_name, Payscale, Department, Hire_Date))
         db_conn.commit()
-        emp_name = "" + emp_id
+        empl_id = "" + emp_id 
         emp_name = "" + first_name 
-        emp_name = "" + Payscale 
-        emp_name = "" + Department 
-        emp_name = "" + Hire_Date 
+        emp_Payscale = "" + Payscale 
+        emp_Department = "" + Department 
+        emp_Hire_Date = "" + Hire_Date 
         # Uplaod image file in S3 #
         emp_image_file_name_in_s3 = "emp-id-" + str(emp_id) + "_image_file"
         s3 = boto3.resource('s3')
@@ -82,8 +82,7 @@ def AddEmp():
         cursor.close()
 
     print("all modification done...")
-    return render_template('AddEmpOutput.html', name=emp_name)
-
+    return render_template('AddEmpOutput.html', id=empl_id, name=emp_name, Payscale=emp_Payscale, Department=emp_Department, Date=emp_Hire_Date)
 
 
 @app.route("/addemp1", methods=['GET', 'POST'])

@@ -19,7 +19,7 @@
         }
         
         body {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/bg2.jpg");
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
             height: 100vh;
             background-size: cover;
             background-position: center center;
@@ -95,9 +95,6 @@
 
 <body>
     <div class="wrapper">
-        <div id="logo">
-                <img src="{{url_for('images', filename='all/citylogo2.png')}}">
-        </div>
         <ul class="nav-area">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -109,6 +106,7 @@
     </div>
 
     <div class="welcome-text">
+        <img src="{{url_for('images', filename='bg2.jpg')}}">
         <center>
             <h1>Employee System Design</h1><br>
             <h3>

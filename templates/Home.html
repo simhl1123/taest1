@@ -21,10 +21,10 @@
             position: relative;
         }
         
-        body img{
-            /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-            url('images/bg2.jpg'); */
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+            
+            url_for('static', filename='images/citylogo2.png');
             height: 100vh;
             background-size: cover;
             background-position: center center;
@@ -107,7 +107,7 @@
 
 </head>
 
-<body src="{{url_for('static', filename='images/bg2.jpg')}}">
+<body>
     <div class="wrapper">
         
         <div id="logo">

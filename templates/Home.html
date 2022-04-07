@@ -2,9 +2,11 @@
 <html>
 
 <head>
+    
     <meta charset="utf-8">
     <title>City Design</title>
     <!--  <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='images/bg2.css') }}"> -->
     <style>
         @charset "utf-8";
         * {
@@ -96,7 +98,7 @@
 <body>
     <div class="wrapper2">
         <div id="logo1">
-            <img src="{{url_for('images', type='bg2.jpg')}}">
+            <img src="{{url_for('static', filename='images/bg2.jpg')}}">
      </div>
         <ul class="nav-area">
             <li><a href="#">Home</a></li>
